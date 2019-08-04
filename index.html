@@ -3,12 +3,35 @@
 <head>
     <title>GifTastic!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
     <div id="container">
+        <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">gifTASTIC!</h1>
+                    <p class="lead">Click on an animal to enjoy your top rated gifs! </p>
+                </div>
+        </div>
+
         <div id="wrapper">
-            <h1 id="title">GifTastic!</h1>
+            <div id="buttons-view"></div>
+
+            <form id="gif-form">
+                <label for="movie-input">Add an animal!</label>
+                <input type="text" id="gif-input">
+                <br>
+
+                <input id="add-gif" type="submit" value="add your animal!">
+            </form>
+
+            <div id="gif-view"></div>
+
+            
+
+
+
         </div>
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
