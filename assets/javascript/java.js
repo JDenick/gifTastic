@@ -2,6 +2,11 @@ alert("Resetting..")
 
 var gifanimals = ["Lion", "Bear", "Dog", "Panda"];
 
+function alertGifAnimal() {
+    var gifAlert = $(this).attr("data-name");
+    alert(gifAlert);
+}
+
 function renderButtons() {
 
     $("#buttons-view").empty();
@@ -24,5 +29,7 @@ $("#add-gif").on("click", function(event){
 
     renderButtons();
 });
+
+    $(document).on("click", ".gif", alertGifAnimal);
 
     renderButtons();
