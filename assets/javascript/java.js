@@ -9,7 +9,7 @@ function displayGifs() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response){
+    }).then(function(response) {
         console.log(queryURL);
         console.log(response);
         var results = response.data;
@@ -29,7 +29,7 @@ function renderButtons() {
     for (var i=0; i<gifArray.length; i++) {
         var a = $("<button>");
         a.addClass("gif-btn");
-        a.attr("data-name", gifArray[i]);
+        a.attr("data-animal", gifArray[i]);
         a.text(gifArray[i]);
         $("#buttons-view").append(a);
     }
