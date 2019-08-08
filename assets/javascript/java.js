@@ -13,10 +13,13 @@ function displayGifs() {
         console.log(queryURL);
         console.log(response);
         var results = response.data;
+        var rating = response.rating; //rating response
 
         for (var i=0; i<results.length; i++){
             var animalDiv = $("<div>");
             var animalImage = $("<img>");
+            var pOne = $("<p>").text("rating: " + results[i].rating);
+            animalDiv.append(pOne);
             animalImage.attr("src", results[i].images.fixed_height.url);
             animalDiv.append(animalImage);
             $("#gifs-view").prepend(animalDiv);
@@ -40,6 +43,7 @@ $("#add-gif").on("click", function(event){
     var gifAnimals = $("#gif-input").val().trim();
     gifArray.push(gifAnimals);
     renderButtons();
+    $("#gif-input").val("");                            // 42 - to clear out text box
 });
 
 $(document).on("click", ".gif-btn", displayGifs);
