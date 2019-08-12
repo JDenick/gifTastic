@@ -1,4 +1,4 @@
-alert("Resetting..")
+// Please see Readme for psuedocode 
 
 var gifArray = ["panda", "shark", "tiger", "bear"];
 
